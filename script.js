@@ -2,7 +2,6 @@ function gettime() {
   let currentTime = new Date();
   return `${currentTime.getHours()}:${currentTime.getMinutes()}`;
 }
-
 class Message {
   name;
   time;
@@ -16,7 +15,6 @@ class Message {
     return `${this.time} ${this.author}: ${this.text}`;
   }
 }
-
 class Messenger {
   messageHistory = [];
 
@@ -25,7 +23,6 @@ class Messenger {
       console.log(text.toString());
     });
   }
-
   send(author, text) {
     this.messageHistory.push(new Message(author, text));
   }
